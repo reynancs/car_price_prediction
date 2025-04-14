@@ -1,12 +1,104 @@
-# Car Price Prediction
+# 🚗 Car Price Prediction – RCAuto (Regression)
+
 
 <a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
 
-Predicting car prices based on attributes such as year, brand, mileage, and fuel type
+**Objetivo do Projeto:** Desenvolver um modelo preditivo para estimar o preço de automóveis com base em variáveis técnicas e comerciais, auxiliando a empresa Geely Auto a entender os fatores que influenciam o preço de carros no mercado americano.
 
-## Project Organization
+> 🔍 *Este projeto segue a metodologia CRISP-DM e utiliza dados públicos disponibilizados apenas para fins educacionais.*  
+> 📊 Dataset original: [Automobile Dataset - UCI](https://archive.ics.uci.edu/dataset/10/automobile)
+
+## 🧭 Metodologia - CRISP-DM
+
+### 1. 🧠 Business Understanding
+
+RCAuto, uma montadora chinesa, deseja entrar no mercado americano. Para isso, contratou uma consultoria com o objetivo de entender os **fatores que impactam o preço dos carros** nos Estados Unidos, visto que podem diferir substancialmente do mercado chinês.
+
+**Perguntas-chave:**
+- Quais variáveis influenciam significativamente o preço de um carro?
+- Como essas variáveis se correlacionam com o preço?
+- É possível construir um modelo preditivo preciso baseado nessas variáveis?
+
+---
+
+### 2. 📊 Data Understanding
+
+O dataset é composto por mais de **2.000 registros** de veículos de diversas marcas, com variáveis que incluem:
+
+- **Atributos Técnicos:** `engine size`, `horsepower`, `curb weight`, `highway-mpg`
+- **Características Comerciais:** `make`, `body-style`, `fuel-type`, `drive-wheels`
+- **Variável Alvo:** `price`
+
+**Principais Ações:**
+- Análise de tipos de variáveis (numéricas, categóricas)
+- Análise de outliers e valores ausentes
+- Distribuições e correlações iniciais
+
+---
+
+### 3. 🧹 Data Preparation
+
+**Tarefas:**
+
+- Exclusão de colunas irrelevantes ou com alta cardinalidade
+- Imputação de valores nulos
+- Transformações (ex: encoding de variáveis categóricas)
+- Normalização de features para melhorar a performance do modelo
+- Criação de novas variáveis (ex: relação `price/horsepower`)
+
+---
+
+### 4. 🧠 Modeling
+
+**Modelos Testados:**
+- Regressão Linear Múltipla (baseline)
+- Regularização com Ridge/Lasso
+- Regressão com `RandomForestRegressor` para comparação
+
+**Métricas de Avaliação:**
+- RMSE (Root Mean Squared Error)
+- R² Score (Coeficiente de Determinação)
+- Gráfico Real vs. Previsto
+
+---
+
+### 5. ✅ Evaluation
+
+O modelo final atinge **R² > 0.85**, o que indica uma boa capacidade explicativa com as variáveis disponíveis. As variáveis com maior impacto no preço incluem:
+
+- Tamanho do motor (`engine-size`)
+- Potência (`horsepower`)
+- Peso do veículo (`curb-weight`)
+- Tipo de tração (`drive-wheels`)
+
+---
+
+### 6. 🚀 Deployment
+
+Este projeto pode ser adaptado para:
+
+- **Estimativa de preços em plataformas de venda de veículos**
+- **Análises de precificação por montadoras e concessionárias**
+- **Apoio à estratégia de entrada em novos mercados**
+
+---
+
+## 🛠️ Tools and Technologies
+
+| Tool | Description |
+|------------|-----------|
+| `Python` | Linguagem de programação principal |
+| `Pandas` | Manipulação de dados |
+| `Seaborn` & `Matplotlib` | Visualização de dados |
+| `scikit-learn` | Treinamento e avaliação de modelos |
+| `Jupyter Notebook` | Documentação e experimentos interativos |
+
+---
+
+### 📁 Project Structure
+
 
 ```
 ├── LICENSE            <- Open-source license if one is chosen
@@ -56,6 +148,28 @@ Predicting car prices based on attributes such as year, brand, mileage, and fuel
     │
     └── plots.py                <- Code to create visualizations
 ```
+---
+
+## 📌 Lessons Learned
+
+
+- Entendimento aprofundado de regressão linear e métricas
+- Transformações eficientes em variáveis categóricas
+- Importância da engenharia de variáveis e preparação de dados
+- Como comunicar resultados para fins estratégicos
+
+---
+
+## 📬 Contact
+
+- 🌐 [LinkedIn](https://www.linkedin.com/in/seuusuario)
+- 📧 renan.email@gmail.com
+
+---
+
+### ⚠️ Disclaimer
+> Os dados são públicos e utilizados apenas para fins educacionais. Nenhuma inferência real deve ser assumida com base neste estudo.
+
 
 --------
 
