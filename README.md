@@ -1,4 +1,4 @@
-# 🚗 Car Price Prediction – RCAuto (Regression)
+# 🚗 Car Price Prediction Analysis – RCAuto
 
 
 <a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
@@ -9,6 +9,7 @@
 
 > 🔍 *Este projeto segue a metodologia CRISP-DM e utiliza dados públicos disponibilizados apenas para fins educacionais.*  
 > 📊 Dataset original: [Automobile Dataset - UCI](https://archive.ics.uci.edu/dataset/10/automobile)
+
 
 ## 🧭 Metodologia - CRISP-DM
 
