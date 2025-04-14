@@ -66,7 +66,7 @@ O dataset é composto por mais de **2.000 registros** de veículos de diversas m
 
 ---
 
-### 6. 🚀 Deployment
+### 6. 🚀 Deployment / Application
 
 Este projeto pode ser adaptado para:
 
