@@ -162,8 +162,8 @@ Este projeto pode ser adaptado para:
 
 ## 📬 Contact
 
-- 🌐 [LinkedIn](https://www.linkedin.com/in/seuusuario)
-- 📧 renan.email@gmail.com
+- 🌐 [LinkedIn](https://www.linkedin.com/in/renan-cardoso-8323b151/)
+- 📧 renan.cs.sants@gmail.com
 
 ---
 
