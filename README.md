@@ -1,14 +1,15 @@
 # 🚗 Car Price Prediction Analysis – RCAuto
 
-
-<a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
+![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-orange.svg) <a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
 
-**Objetivo do Projeto:** Desenvolver um modelo preditivo para estimar o preço de automóveis com base em variáveis técnicas e comerciais, auxiliando a empresa Geely Auto a entender os fatores que influenciam o preço de carros no mercado americano.
+> **Objetivo do Projeto:** 
+> Desenvolver um modelo preditivo para estimar o preço de automóveis com base em variáveis técnicas e comerciais, auxiliando a empresa  Geely Auto a entender os fatores que influenciam o preço de carros no mercado americano.
 
-> 🔍 *Este projeto segue a metodologia CRISP-DM e utiliza dados públicos disponibilizados apenas para fins educacionais.*  
-> 📊 Dataset original: [Automobile Dataset - UCI](https://archive.ics.uci.edu/dataset/10/automobile)
+
+🔍 *Este projeto segue a metodologia CRISP-DM e utiliza dados públicos disponibilizados apenas para fins educacionais.*  
+📊 Dataset original: [Automobile Dataset - UCI](https://archive.ics.uci.edu/dataset/10/automobile)
 
 
 ## 🧭 Metodologia - CRISP-DM
@@ -44,8 +45,9 @@ O dataset é composto por mais de **2.000 registros** de veículos de diversas m
 **Tarefas:**
 
 - Exclusão de colunas irrelevantes ou com alta cardinalidade
-- Imputação de valores nulos
-- Transformações (ex: encoding de variáveis categóricas)
+- Remoção de valores nulos ou ausentes
+- Remoção de outliers 
+- Transformações (encoding de variáveis categóricas)
 - Normalização de features para melhorar a performance do modelo
 - Criação de novas variáveis (ex: relação `price/horsepower`)
 
@@ -54,25 +56,13 @@ O dataset é composto por mais de **2.000 registros** de veículos de diversas m
 ### 4. 🧠 Modeling
 
 **Modelos Testados:**
-- Regressão Linear Múltipla (baseline)
-- Regularização com Ridge/Lasso
-- Regressão com `RandomForestRegressor` para comparação
 
 **Métricas de Avaliação:**
-- RMSE (Root Mean Squared Error)
-- R² Score (Coeficiente de Determinação)
-- Gráfico Real vs. Previsto
 
 ---
 
 ### 5. ✅ Evaluation
 
-O modelo final atinge **R² > 0.85**, o que indica uma boa capacidade explicativa com as variáveis disponíveis. As variáveis com maior impacto no preço incluem:
-
-- Tamanho do motor (`engine-size`)
-- Potência (`horsepower`)
-- Peso do veículo (`curb-weight`)
-- Tipo de tração (`drive-wheels`)
 
 ---
 
@@ -99,7 +89,6 @@ Este projeto pode ser adaptado para:
 ---
 
 ### 📁 Project Structure
-
 
 ```
 ├── LICENSE            <- Open-source license if one is chosen
