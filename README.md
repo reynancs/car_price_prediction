@@ -1,12 +1,8 @@
-# 🚗 Car Price Prediction Analysis – RCAuto
+# 🚗 Previsão de Preço de Carros para Entrada no Mercado Americano – RCAuto ReSearch
 
 ![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-orange.svg) <a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
-
-> **Objetivo do Projeto:** 
-> Desenvolver um modelo preditivo para estimar o preço de automóveis com base em variáveis técnicas e comerciais, auxiliando a empresa  Geely Auto a entender os fatores que influenciam o preço de carros no mercado americano.
-
 
 🔍 *Este projeto segue a metodologia CRISP-DM e utiliza dados públicos disponibilizados apenas para fins educacionais.*  
 📊 Dataset original: [Automobile Dataset - UCI](https://archive.ics.uci.edu/dataset/10/automobile)
@@ -16,10 +12,14 @@
 
 ### 1. 🧠 Business Understanding
 
-RCAuto, uma montadora chinesa, deseja entrar no mercado americano. Para isso, contratou uma consultoria com o objetivo de entender os **fatores que impactam o preço dos carros** nos Estados Unidos, visto que podem diferir substancialmente do mercado chinês.
+A GT Auto é uma montadora chinesa que deseja entrar no mercado americano. Para isso, contratou uma consultoria com o objetivo de entender os **fatores que impactam o preço dos carros** nos Estados Unidos, visto que podem diferir substancialmente do mercado chinês.
 
-**Perguntas-chave:**
-- Quais variáveis influenciam significativamente o preço de um carro?
+**Objetivo principal**:
+- Desenvolver um modelo preditivo que explique o preço dos carros com base em características técnicas e de design.
+
+**Problemas de negócio**:
+- Quais variáveis mais impactam no preço?
+- Como ajustar as especificações dos carros para se posicionar competitivamente?
 - Como essas variáveis se correlacionam com o preço?
 - É possível construir um modelo preditivo preciso baseado nessas variáveis?
 
@@ -33,10 +33,14 @@ O dataset é composto por mais de **2.000 registros** de veículos de diversas m
 - **Características Comerciais:** `make`, `body-style`, `fuel-type`, `drive-wheels`
 - **Variável Alvo:** `price`
 
+**Insights esperados**:
+- Correlação entre variáveis como [`engine_size`, `curb_weight`, `horsepower`] vs `price`
+- Detectar outliers e valores inconsistentes
+
 **Principais Ações:**
-- Análise de tipos de variáveis (numéricas, categóricas)
-- Análise de outliers e valores ausentes
-- Distribuições e correlações iniciais
+- Análise Exploratória do Dataset: estatísticas descritivas; tipos de variáveis (numéricas, categóricas)
+- Distribuição dos Dados 
+- Identificação de Outliers, inconsistências evalores ausentes
 
 ---
 
@@ -44,12 +48,13 @@ O dataset é composto por mais de **2.000 registros** de veículos de diversas m
 
 **Tarefas:**
 
-- Exclusão de colunas irrelevantes ou com alta cardinalidade
+- Exclusão de colunas irrelevantes
 - Remoção de valores nulos ou ausentes
 - Remoção de outliers 
 - Transformações (encoding de variáveis categóricas)
 - Normalização de features para melhorar a performance do modelo
 - Criação de novas variáveis (ex: relação `price/horsepower`)
+- Separação do dataset de treinamento e teste
 
 ---
 
