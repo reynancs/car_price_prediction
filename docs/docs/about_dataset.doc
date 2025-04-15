@@ -1,0 +1,34 @@
+📘 Resumo do Dataset – Car Price Prediction
+Este conjunto de dados contém informações sobre automóveis e é composto por três tipos principais de variáveis:
+
+a)Especificações Técnicas dos Carros
+- Inclui características como tamanho do motor, tipo de combustível, número de portas, peso, dimensões e mais.
+- Essas variáveis são fundamentais para modelos de regressão, pois explicam boa parte do comportamento do preço.
+
+b) Classificação de Risco de Seguro (symboling)
+- Avaliação que indica o quão arriscado é o carro em relação ao seu preço.
+- Varia de -3 (muito seguro) a +3 (muito arriscado).
+- Útil para análises de risco, segmentação de clientes e possíveis clusters.
+
+c) Perdas Normalizadas (normalized-losses)
+- Representa a média de pagamento de sinistros por ano para veículos assegurados, normalizada por categoria.
+- É uma medida de quanto, em média, o carro “custa” para seguradoras.
+- Pode ser usada para prever o risco financeiro ou identificar padrões de manutenção e custo-benefício.
+
+✅ Dicas para trabalhar com esse dataset
+🔍 Análise Exploratória:
+- Explore a correlação entre price, engine-size, curb-weight, horsepower e normalized-losses.
+- Verifique se symboling e normalized-losses podem ser usados como variáveis categóricas ou numéricas dependendo da modelagem.
+
+🧼 Limpeza de Dados:
+- Algumas colunas possuem valores faltantes como normalized-losses, bore, stroke, horsepower, etc.
+→ Use imputação por média/mediana ou exclusão condicional.
+
+📊 Visualizações Recomendadas:
+- Gráficos de dispersão entre price e atributos contínuos.
+- Boxplots para comparar price por categorias como body-style, fuel-type, etc.
+
+🤖 Modelagem:
+- price é a variável alvo (target).
+- Use regressão linear como baseline, e depois evolua para modelos como Random Forest, Gradient Boosting, etc.
+- Verifique se a transformação logarítmica em price ajuda a normalizar a distribuição.

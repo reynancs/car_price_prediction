@@ -145,6 +145,41 @@ Este projeto pode ser adaptado para:
 ```
 ---
 
+### 📚  Data Catalog
+
+This data dictionary provides a structured description of the variables used in the car price prediction dataset.
+
+| Variable Name       | Role                | Type Variable | Description |
+|---------------------|---------------------|----------------|-------------|
+| symboling           | Feature             | Categorical    | Risk factor assigned by insurance (ranging from -3 to 3; higher means more risky) |
+| normalized-losses   | Feature             | Continuous     | Relative average loss paid by insurance; indicates vehicle damage risk |
+| make                | Feature             | Categorical    | Manufacturer brand of the car |
+| fuel-type           | Feature             | Categorical    | Type of fuel the car uses (`gas` or `diesel`) |
+| aspiration          | Feature             | Categorical    | Engine type: standard or turbocharged |
+| num-of-doors        | Feature             | Categorical    | Number of doors in the vehicle |
+| body-style          | Feature             | Categorical    | Body type of the car (e.g., sedan, hatchback) |
+| drive-wheels        | Feature             | Categorical    | Type of drivetrain (front, rear, or 4-wheel drive) |
+| engine-location     | Feature             | Categorical    | Location of the engine (front or rear) |
+| wheel-base          | Feature             | Continuous     | Distance between front and rear wheels (affects stability) |
+| length              | Feature             | Continuous     | Overall length of the vehicle in inches |
+| width               | Feature             | Continuous     | Width of the vehicle in inches |
+| height              | Feature             | Continuous     | Height of the vehicle in inches |
+| curb-weight         | Feature             | Continuous     | Total weight of the car without passengers or cargo |
+| engine-type         | Feature             | Categorical    | Engine configuration (e.g., OHV, OHC, DOHC) |
+| num-of-cylinders    | Feature             | Categorical    | Number of cylinders in the engine |
+| engine-size         | Feature             | Continuous     | Engine displacement in cubic centimeters |
+| fuel-system         | Feature             | Categorical    | Type of fuel injection system |
+| bore                | Feature             | Continuous     | Diameter of each cylinder in inches |
+| stroke              | Feature             | Continuous     | Distance the piston travels within the cylinder (in inches) |
+| compression-ratio   | Feature             | Continuous     | Ratio of engine cylinder volume to combustion chamber volume |
+| horsepower          | Feature             | Continuous     | Engine power output measured in horsepower |
+| peak-rpm            | Feature             | Continuous     | Engine speed at which maximum horsepower is generated |
+| city-mpg            | Feature             | Continuous     | Fuel consumption in city driving (miles per gallon) |
+| highway-mpg         | Feature             | Continuous     | Fuel consumption on highways (miles per gallon) |
+| price               | Target              | Continuous     | Selling price of the car in USD |
+
+---
+
 ## 📌 Lessons Learned
 
 
