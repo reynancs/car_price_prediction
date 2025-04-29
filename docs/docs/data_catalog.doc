@@ -1,0 +1,43 @@
+### 📘 Dicionário de Dados – Dataset de Predição de Preços de Carros
+
+**Informações do Dataset**  
+Este conjunto de dados consiste em três tipos de entidades:
+- (a) a especificação de um automóvel em termos de várias características;
+- (b) sua classificação de risco de seguro atribuída;
+- (c) suas perdas normalizadas em uso, em comparação a outros carros.
+
+A segunda classificação (b) `symboling` corresponde ao grau em que o automóvel é mais arriscado do que seu preço indica. Os carros são inicialmente atribuídos a um símbolo de fator de risco associado ao seu preço. Se for mais arriscado (ou menos), esse símbolo é ajustado movendo-o para cima (ou para baixo) na escala. Atuários chamam esse processo de "symboling".  
+Um valor de +3 indica que o automóvel é arriscado, enquanto -3 indica que é provavelmente bastante seguro.
+
+O terceiro fator (c) `normalized-losses` é o pagamento médio relativo de perdas por ano de veículo segurado. Este valor é normalizado para todos os automóveis dentro de uma classificação de tamanho particular (pequeno de duas portas, peruas, esportivos/especializados, etc.), e representa a perda média por carro por ano.
+
+Este dicionário de dados fornece uma descrição estruturada das variáveis utilizadas no dataset de predição de preços de carros.
+
+| Nome da Variável     | Função              | Tipo de Variável  | Descrição                                                                            |
+|----------------------|---------------------|-------------------|--------------------------------------------------------------------------------------|
+| symboling            | Atributo            | Categorica        | Fator de risco atribuído pelo seguro (varia de -3 a 3; quanto maior, mais arriscado) |
+| normalized-losses    | Atributo            | Numerica          | Perda média relativa paga pelo seguro; indica o risco de dano do veículo |
+| make                 | Atributo            | Categorica        | Marca do fabricante do carro |
+| fuel-type            | Atributo            | Categorica        | Tipo de combustível usado (gasolina ou diesel) |
+| aspiration           | Atributo            | Categorica        | Tipo de motor: padrão ou turbo |
+| num-of-doors         | Atributo            | Categorica        | Número de portas do veículo |
+| body-style           | Atributo            | Categorica        | Tipo de carroceria do carro (ex.: sedã, hatchback) |
+| drive-wheels         | Atributo            | Categorica        | Tipo de tração (dianteira, traseira ou 4x4) |
+| engine-location      | Atributo            | Categóorica       | Localização do motor (frontal ou traseira) |
+| wheel-base           | Atributo            | Numerica          | Distância entre os eixos dianteiro e traseiro (afeta a estabilidade) |
+| length               | Atributo            | Numerica          | Comprimento total do veículo em polegadas |
+| width                | Atributo            | Numerica          | Largura do veículo em polegadas |
+| height               | Atributo            | Numerica          | Altura do veículo em polegadas |
+| curb-weight          | Atributo            | Numerica          | Peso total do carro sem passageiros ou carga |
+| engine-type          | Atributo            | Categorica        | Configuração do motor (ex.: OHV, OHC, DOHC) |
+| num-of-cylinders     | Atributo            | Categorica        | Número de cilindros do motor |
+| engine-size          | Atributo            | Numerica          | Deslocamento do motor em centímetros cúbicos |
+| fuel-system          | Atributo            | Categorica        | Tipo de sistema de injeção de combustível |
+| bore                 | Atributo            | Numerica          | Diâmetro de cada cilindro em polegadas |
+| stroke               | Atributo            | Numerica          | Distância que o pistão percorre dentro do cilindro (em polegadas) |
+| compression-ratio    | Atributo            | Numerica          | Relação entre o volume do cilindro do motor e a câmara de combustão |
+| horsepower           | Atributo            | Numerica          | Potência do motor medida em cavalos de força |
+| peak-rpm             | Atributo            | Numerica          | Rotação do motor na qual a potência máxima é gerada |
+| city-mpg             | Atributo            | Numerica          | Consumo de combustível na cidade (milhas por galão) |
+| highway-mpg          | Atributo            | Numerica          | Consumo de combustível na estrada (milhas por galão) |
+| price                | Alvo                | Numerica          | Preço de venda do carro em dólares (USD) |
