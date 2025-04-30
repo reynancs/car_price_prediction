@@ -27,7 +27,7 @@ A GT Auto é uma montadora chinesa que deseja entrar no mercado americano. Para 
 
 ### 2. 📊 Data Understanding
 
-O dataset é composto por mais de **2.000 registros** de veículos de diversas marcas, com variáveis que incluem:
+O dataset é composto por 205 registros de veículos de diversas marcas, com variáveis que incluem:
 
 - **Atributos Técnicos:** `engine size`, `horsepower`, `curb weight`, `highway-mpg`
 - **Características Comerciais:** `make`, `body-style`, `fuel-type`, `drive-wheels`
@@ -39,8 +39,8 @@ O dataset é composto por mais de **2.000 registros** de veículos de diversas m
 
 **Principais Ações:**
 - Análise Exploratória do Dataset: estatísticas descritivas; tipos de variáveis (numéricas, categóricas)
-- Distribuição dos Dados 
-- Identificação de Outliers, inconsistências evalores ausentes
+- Distribuição dos Dados;
+- Identificação de Outliers, inconsistências e valores ausentes
 
 ---
 
