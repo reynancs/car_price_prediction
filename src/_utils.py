@@ -21,18 +21,18 @@ def classificar_correlacao(x, y):
     abs_corr = abs(corr)
     
     if abs_corr <= 0.19:
-        classificacao = "Uma correlação bem fraca"
+        classificacao = "Correlação bem fraca"
     elif abs_corr <= 0.39:
-        classificacao = "Uma correlação fraca"
+        classificacao = "Correlação fraca"
     elif abs_corr <= 0.69:
-        classificacao = "Uma correlação moderada"
+        classificacao = "Correlação moderada"
     elif abs_corr <= 0.89:
-        classificacao = "Uma correlação forte"
+        classificacao = "Correlação forte"
     else:
-        classificacao = "Uma correlação muito forte"
+        classificacao = "Correlação muito forte"
     
     return {
         'correlacao': corr,
-        'p_valor': p_value,
-        'classificacao': classificacao
+        '\np_valor': p_value,
+        '\nclassificacao': classificacao
     }

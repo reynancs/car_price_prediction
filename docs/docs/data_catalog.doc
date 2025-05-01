@@ -23,7 +23,7 @@ Este dicionário de dados fornece uma descrição estruturada das variáveis uti
 | num-of-doors         | Atributo            | Categorica        | Número de portas do veículo |
 | body-style           | Atributo            | Categorica        | Tipo de carroceria do carro (ex.: sedã, hatchback) |
 | drive-wheels         | Atributo            | Categorica        | Tipo de tração (dianteira, traseira ou 4x4) |
-| engine-location      | Atributo            | Categóorica       | Localização do motor (frontal ou traseira) |
+| engine-location      | Atributo            | Categórica        | Localização do motor (frontal ou traseira) |
 | wheel-base           | Atributo            | Numerica          | Distância entre os eixos dianteiro e traseiro (afeta a estabilidade) |
 | length               | Atributo            | Numerica          | Comprimento total do veículo em polegadas |
 | width                | Atributo            | Numerica          | Largura do veículo em polegadas |

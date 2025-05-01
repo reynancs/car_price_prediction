@@ -29,7 +29,7 @@ A GT Auto é uma montadora chinesa que deseja entrar no mercado americano. Para 
 
 O dataset é composto por 205 registros de veículos de diversas marcas, com variáveis que incluem:
 
-- **Atributos Técnicos:** `engine size`, `horsepower`, `curb weight`, `highway-mpg`
+- **Características Técnicas:** `engine size`, `horsepower`, `curb weight`, `highway-mpg`
 - **Características Comerciais:** `make`, `body-style`, `fuel-type`, `drive-wheels`
 - **Variável Alvo:** `price`
 
@@ -149,34 +149,34 @@ Este projeto pode ser adaptado para:
 
 This data dictionary provides a structured description of the variables used in the car price prediction dataset.
 
-| Variable Name       | Role                | Type Variable | Description |
-|---------------------|---------------------|----------------|-------------|
-| symboling           | Feature             | Categorical    | Risk factor assigned by insurance (ranging from -3 to 3; higher means more risky) |
-| normalized-losses   | Feature             | Continuous     | Relative average loss paid by insurance; indicates vehicle damage risk |
-| make                | Feature             | Categorical    | Manufacturer brand of the car |
-| fuel-type           | Feature             | Categorical    | Type of fuel the car uses (`gas` or `diesel`) |
-| aspiration          | Feature             | Categorical    | Engine type: standard or turbocharged |
-| num-of-doors        | Feature             | Categorical    | Number of doors in the vehicle |
-| body-style          | Feature             | Categorical    | Body type of the car (e.g., sedan, hatchback) |
-| drive-wheels        | Feature             | Categorical    | Type of drivetrain (front, rear, or 4-wheel drive) |
-| engine-location     | Feature             | Categorical    | Location of the engine (front or rear) |
-| wheel-base          | Feature             | Continuous     | Distance between front and rear wheels (affects stability) |
-| length              | Feature             | Continuous     | Overall length of the vehicle in inches |
-| width               | Feature             | Continuous     | Width of the vehicle in inches |
-| height              | Feature             | Continuous     | Height of the vehicle in inches |
-| curb-weight         | Feature             | Continuous     | Total weight of the car without passengers or cargo |
-| engine-type         | Feature             | Categorical    | Engine configuration (e.g., OHV, OHC, DOHC) |
-| num-of-cylinders    | Feature             | Categorical    | Number of cylinders in the engine |
-| engine-size         | Feature             | Continuous     | Engine displacement in cubic centimeters |
-| fuel-system         | Feature             | Categorical    | Type of fuel injection system |
-| bore                | Feature             | Continuous     | Diameter of each cylinder in inches |
-| stroke              | Feature             | Continuous     | Distance the piston travels within the cylinder (in inches) |
-| compression-ratio   | Feature             | Continuous     | Ratio of engine cylinder volume to combustion chamber volume |
-| horsepower          | Feature             | Continuous     | Engine power output measured in horsepower |
-| peak-rpm            | Feature             | Continuous     | Engine speed at which maximum horsepower is generated |
-| city-mpg            | Feature             | Continuous     | Fuel consumption in city driving (miles per gallon) |
-| highway-mpg         | Feature             | Continuous     | Fuel consumption on highways (miles per gallon) |
-| price               | Target              | Continuous     | Selling price of the car in USD |
+| Nome da Variável     | Função              | Tipo de Variável  | Descrição                                                                            |
+|----------------------|---------------------|-------------------|--------------------------------------------------------------------------------------|
+| symboling            | Atributo            | Categorica        | Fator de risco atribuído pelo seguro (varia de -3 a 3; quanto maior, mais arriscado) |
+| normalized-losses    | Atributo            | Numerica          | Perda média relativa paga pelo seguro; indica o risco de dano do veículo |
+| make                 | Atributo            | Categorica        | Marca do fabricante do carro |
+| fuel-type            | Atributo            | Categorica        | Tipo de combustível usado (gasolina ou diesel) |
+| aspiration           | Atributo            | Categorica        | Tipo de motor: padrão ou turbo |
+| num-of-doors         | Atributo            | Categorica        | Número de portas do veículo |
+| body-style           | Atributo            | Categorica        | Tipo de carroceria do carro (ex.: sedã, hatchback) |
+| drive-wheels         | Atributo            | Categorica        | Tipo de tração (dianteira, traseira ou 4x4) |
+| engine-location      | Atributo            | Categórica        | Localização do motor (frontal ou traseira) |
+| wheel-base           | Atributo            | Numerica          | Distância entre os eixos dianteiro e traseiro (afeta a estabilidade) |
+| length               | Atributo            | Numerica          | Comprimento total do veículo em polegadas |
+| width                | Atributo            | Numerica          | Largura do veículo em polegadas |
+| height               | Atributo            | Numerica          | Altura do veículo em polegadas |
+| curb-weight          | Atributo            | Numerica          | Peso total do carro sem passageiros ou carga (kg) |
+| engine-type          | Atributo            | Categorica        | Configuração do motor (ex.: OHV, OHC, DOHC) |
+| num-of-cylinders     | Atributo            | Categorica        | Número de cilindros do motor |
+| engine-size          | Atributo            | Numerica          | Deslocamento do motor em centímetros cúbicos |
+| fuel-system          | Atributo            | Categorica        | Tipo de sistema de injeção de combustível |
+| bore                 | Atributo            | Numerica          | Diâmetro de cada cilindro em polegadas |
+| stroke               | Atributo            | Numerica          | Distância que o pistão percorre dentro do cilindro (em polegadas) |
+| compression-ratio    | Atributo            | Numerica          | Relação entre o volume do cilindro do motor e a câmara de combustão |
+| horsepower           | Atributo            | Numerica          | Potência do motor medida em cavalos de força (hp) |
+| peak-rpm             | Atributo            | Numerica          | Rotação do motor na qual a potência máxima é gerada |
+| city-mpg             | Atributo            | Numerica          | Consumo de combustível na cidade (milhas por galão - mpg) |
+| highway-mpg          | Atributo            | Numerica          | Consumo de combustível na estrada (milhas por galão - mpg) |
+| price                | Alvo                | Numerica          | Preço de venda do carro em dólares (USD) |
 
 ---
 

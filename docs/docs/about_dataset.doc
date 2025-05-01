@@ -5,12 +5,12 @@ a)Especificações Técnicas dos Carros
 - Inclui características como tamanho do motor, tipo de combustível, número de portas, peso, dimensões e mais.
 - Essas variáveis são fundamentais para modelos de regressão, pois explicam boa parte do comportamento do preço.
 
-b) Classificação de Risco de Seguro (symboling)
+b) Classificação de Risco de Seguro (`symboling`)
 - Avaliação que indica o quão arriscado é o carro em relação ao seu preço.
 - Varia de -3 (muito seguro) a +3 (muito arriscado).
 - Útil para análises de risco, segmentação de clientes e possíveis clusters.
 
-c) Perdas Normalizadas (normalized-losses)
+c) Perdas Normalizadas (`normalized-losses`)
 - Representa a média de pagamento de sinistros por ano para veículos assegurados, normalizada por categoria.
 - É uma medida de quanto, em média, o carro “custa” para seguradoras.
 - Pode ser usada para prever o risco financeiro ou identificar padrões de manutenção e custo-benefício.
