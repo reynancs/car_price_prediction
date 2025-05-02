@@ -8,53 +8,74 @@
 📊 Dataset original: [Automobile Dataset - UCI](https://archive.ics.uci.edu/dataset/10/automobile)
 
 
-## 🧭 Metodologia - CRISP-DM
+## 🧭 CRISP-DM METODOLOGY
 
 ### 1. 🧠 Business Understanding
 
-A GT Auto é uma montadora chinesa que deseja entrar no mercado americano. Para isso, contratou uma consultoria com o objetivo de entender os **fatores que impactam o preço dos carros** nos Estados Unidos, visto que podem diferir substancialmente do mercado chinês.
+No dinâmico e altamente competitivo mercado automotivo, a definição estratégica de preços para novos veículos é uma alavanca crítica para o sucesso de montadoras e suas redes de concessionárias. Uma precificação otimizada não só garante a rentabilidade e a competitividade no lançamento de novos modelos, mas também informa a estratégia de posicionamento de mercado e o desenvolvimento de produtos futuros. O desafio reside em quantificar o impacto de inúmeras características do veículo no seu valor percebido e real, além de entender como fatores relacionados a risco e potenciais custos de manutenção/reparo podem influenciar essa equação.
+
+Com isto uma rede de consecionárias vem perdendo ***market share*** no seu último ano e a nova gerência contratou a **RC Research** para extrair insights fundamentos afim de criar um modelo de precificação do veículo.Os aprendizados servirão como base para refinar os modelos de precificação atuais da concessionária, otimizar a seleção de features para novos modelos e entender a percepção de risco associada a diferentes configurações de veículos.
+
 
 **Objetivo principal**:
-- Desenvolver um modelo preditivo que explique o preço dos carros com base em características técnicas e de design.
+- Desenvolver um modelo de regressão capaz de prever o preço (`price`) de carros com base em suas características técnicas, de design, risco de seguro (`symboling`) e perdas normalizadas (`normalized-losses`).
+
 
 **Problemas de negócio**:
-- Quais variáveis mais impactam no preço?
-- Como ajustar as especificações dos carros para se posicionar competitivamente?
-- Como essas variáveis se correlacionam com o preço?
-- É possível construir um modelo preditivo preciso baseado nessas variáveis?
+- a) Quais características intrínsecas do veículo (ex: tamanho do motor, potência, tipo de carroceria, marca) têm o maior impacto na definição do preço inicial (price)?
+- b) Como o risco atribuído (`symboling`) e as perdas normalizadas (`normalized-losses`) se relacionam com as características do veículo e, consequentemente, com o preço (`price`)? (Entender se carros com características associadas a maior risco/perdas tendiam a ser precificados de forma diferente na época).
+- c) É possível construir um modelo preditivo que estime o preço ideal com 85% de acurácia?
+
+**Hipóteses para serem testadas**:
+- a) Características relacionadas à performance do veículo (ex: horsepower, engine-size) terão uma correlação positiva significativa com o price?
+- b) Veículos com maior tamanho (length, width, wheel-base) tenderão a ter um price mais alto?
+- c) Certas marcas (make) terão um impacto significativo no price, refletindo percepção de valor e posicionamento de mercado.
+- d) Tipos de carroceria (body-style) associados a segmentos premium ou esportivos (ex: convertible, hardtop) terão preços médios (price) mais altos do que tipos de carroceria mais utilitários (ex: sedan, hatchback).
+- e) O risco atribuído pelo seguro (symboling) terá alguma correlação (possivelmente negativa, indicando que carros percebidos como mais arriscados podem ser menos atraentes ou terem preços ajustados) com o price.
+- f)  As perdas normalizadas (normalized-losses) terão uma correlação (possivelmente positiva, indicando que características associadas a maiores perdas podem estar presentes em carros de maior valor ou complexidade, ou talvez uma correlação negativa se indicarem problemas que depreciem o valor) com o price.
+- g) Há uma relação entre características específicas do veículo (ex: tipo de tração drive-wheels, engine-location) e o symboling ou normalized-losses.
+-  Um modelo de regressão linear ou baseado em árvores será capaz de predizer o price com um grau razoável de acurácia utilizando as características do veículo.
+Quais características intrínsecas do veículo (ex: tamanho do motor, potência, tipo de carroceria, marca) têm o maior impacto na definição do preço inicial (price)?
+- Como o risco atribuído (symboling) e as perdas normalizadas (normalized-losses) se relacionam com as características do veículo e, consequentemente, com o preço (price)? (Entender se carros com características associadas a maior risco/perdas tendiam a ser precificados de forma diferente na época).
 
 ---
 
 ### 2. 📊 Data Understanding
 
-O dataset é composto por 205 registros de veículos de diversas marcas, com variáveis que incluem:
+**Objetivo**: entender o conteúdo, a estrutura e a qualidade dos dados.
 
-- **Características Técnicas:** `engine size`, `horsepower`, `curb weight`, `highway-mpg`
-- **Características Comerciais:** `make`, `body-style`, `fuel-type`, `drive-wheels`
-- **Variável Alvo:** `price`
 
-**Insights esperados**:
-- Correlação entre variáveis como [`engine_size`, `curb_weight`, `horsepower`] vs `price`
-- Detectar outliers e valores inconsistentes
+O dataset é composto por 205 registros de veículos de diversas marcas, com variáveis que incluem diversas características, sendo classificadas da seguinte forma com alguns exemplos:
 
-**Principais Ações:**
-- Análise Exploratória do Dataset: estatísticas descritivas; tipos de variáveis (numéricas, categóricas)
-- Distribuição dos Dados;
-- Identificação de Outliers, inconsistências e valores ausentes
+**Caracteristicas:**
+- **Técnicas:** `engine-size`, `horsepower`, `curb-weight`...
+- **Design:** `body-style`, `num-of-doors`, `drive-wheels`.
+- **Mercado:**`make`, `fuel-type`, `aspiration`
+- **Alvo:** `price`
+
+
+**Atividades:**
+- Analisa a qualidade inicial dos dados
+- Verifica valores ausentes, tipos de dados, distribuições
+- Identifica valores extremos, inconsistências, duplicatas
+- Verifica a estrutura dos dados
+- Realiza estatísticas descritivas iniciais (describe, value_counts)
+- Responder algumas questões de negócios com análise exploratória dos dados
 
 ---
 
 ### 3. 🧹 Data Preparation
+**Objetivo:** Transformar os dados brutos em um formato para uso em análise exploratória e modelagem.
 
-**Tarefas:**
-
-- Exclusão de colunas irrelevantes
-- Remoção de valores nulos ou ausentes
-- Remoção de outliers 
-- Transformações (encoding de variáveis categóricas)
-- Normalização de features para melhorar a performance do modelo
-- Criação de novas variáveis (ex: relação `price/horsepower`)
-- Separação do dataset de treinamento e teste
+**Atividades:**
+- Tratamento de valores ausentes;
+- Substituição de valores inconsistentes
+- Conversão de tipos
+- Remoção de colunas irrelevantes ou redundantes
+- Trata dados faltantes, padroniza formatos, remove duplicatas
+- Tratamento de outliers extremos
+- Combinação de múltiplas fontes
+- Salvamento do dataset limpo (`data/processed/`)
 
 ---
 
@@ -83,13 +104,13 @@ Este projeto pode ser adaptado para:
 
 ## 🛠️ Tools and Technologies
 
-| Tool | Description |
-|------------|-----------|
-| `Python` | Linguagem de programação principal |
-| `Pandas` | Manipulação de dados |
-| `Seaborn` & `Matplotlib` | Visualização de dados |
-| `scikit-learn` | Treinamento e avaliação de modelos |
-| `Jupyter Notebook` | Documentação e experimentos interativos |
+| Tool                     | Description                        |
+|------------------------ -|---------------------  -------------|
+| `Python`                 | Linguagem de programação principal |
+| `Pandas`                 | Manipulação de dados |
+| `Seaborn` `Matplotlib`   | Visualização de dados |
+| `scikit-learn`           | Treinamento e avaliação de modelos |
+| `Jupyter Notebook`       | Documentação e experimentos interativos |
 
 ---
 
@@ -181,7 +202,6 @@ This data dictionary provides a structured description of the variables used in 
 ---
 
 ## 📌 Lessons Learned
-
 
 - Entendimento aprofundado de regressão linear e métricas
 - Transformações eficientes em variáveis categóricas
